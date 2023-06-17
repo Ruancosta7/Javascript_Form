@@ -45,7 +45,7 @@ form {
 form>img {
     grid-area: img;
     animation: growing 2s, cat-m 2.5s 2.1s linear infinite alternate;
-    height: 300px;
+    height: 250px;
     display: flex;
     justify-self: center;
     align-self: center;
@@ -61,7 +61,7 @@ form h3 {
     margin-left: 4px;
 }
 
-.user {
+.user{
     animation: left-right 1s;
     display: grid;
     grid-template-rows: 25px 5px;
@@ -358,7 +358,7 @@ header a:active {
     background-color: #dfdfdf;
 }
 
-@media (min-width:767px) {
+@media screen and (min-width:767px) {
 
     form{
         height: 95%;
@@ -418,7 +418,7 @@ header a:active {
     }
 }
 
-@media (min-width:1023px) {
+@media  screen and  (min-width:1023px) {
     section {
         height: 100vh;
         display: grid;
@@ -445,8 +445,8 @@ header a:active {
         grid-area: form;
         background-color: #202020;
         display: grid;
-        height: 80vh;
-        width: 70em;
+        height: 90%;
+        width: 90%;
         border-radius: 10px;
         justify-self: center;
         grid-template-columns: 45% 45% 10%;
@@ -549,9 +549,8 @@ header a:active {
 }
 
 
-@media (min-width:1440px) {
+@media  screen and (min-width:1440px) {
     form{
-        width: 95%;
         grid-template-rows: 80px 250px 200px auto;
     }
     form>h3 {
