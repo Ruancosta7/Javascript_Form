@@ -49,6 +49,7 @@ form>img {
     display: flex;
     justify-self: center;
     align-self: center;
+    margin:0px 30px;
 
 }
 
@@ -358,6 +359,10 @@ header a:active {
 }
 
 @media (min-width:767px) {
+
+    form{
+        height: 95%;
+    }
     header a {
         font-size: 30px;
     }
