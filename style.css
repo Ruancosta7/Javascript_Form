@@ -525,7 +525,7 @@ header a:active {
         margin-left: 40px;
     }
     nav a:hover{
-        border-bottom: 3px solid #212121;
+        transform: scale(1.1);
         transition: .2s;
     }
     nav a:active{
