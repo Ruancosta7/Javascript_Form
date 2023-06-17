@@ -1,0 +1,595 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* font-family: "Poppins", sans-serif; */
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+section {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 40px 50px;
+    grid-template-areas:
+        "logo btn2"
+        "nav nav"
+        "form form"
+    ;
+}
+
+form {
+    align-self: center;
+    grid-area: form;
+    background-color: #202020;
+    display: grid;
+    height: 90%;
+    width: 90%;
+    border-radius: 10px;
+    justify-self: center;
+    grid-template-areas:
+        "login mode"
+        "img img"
+        "user user"
+        "password password"
+        "button button"
+    ;
+    box-shadow: 7px 7px 15px #e030ff;
+}
+
+form>img {
+    grid-area: img;
+    animation: growing 2s, cat-m 2.5s 2.1s linear infinite alternate;
+    height: 300px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+
+}
+
+form h3 {
+    align-self: center;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 4px;
+}
+
+.user {
+    animation: left-right 1s;
+    display: grid;
+    grid-template-rows: 25px 5px;
+    justify-self: center;
+    align-content: center;
+    grid-area: user;
+}
+
+.user label {
+    font-weight: 600;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.user input {
+    font-size: 17px;
+    margin-top: 5px;
+    border-radius: 17px;
+    height: 40px;
+    padding: 2px 3px;
+    width: 200px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.user input:focus {
+    outline: 0px;
+}
+
+.password {
+    animation: left-right 1s;
+    display: grid;
+    grid-template-rows: 25px 5px;
+    justify-self: center;
+    align-content: center;
+    grid-area: password;
+}
+
+.password label {
+    font-family: 'Raleway', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.password input {
+    font-size: 17px;
+    margin-top: 5px;
+    border-radius: 17px;
+    height: 40px;
+    padding: 2px 3px;
+    width: 200px;
+    border: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.password input:focus {
+    outline: 0px;
+}
+
+#btn {
+    animation: growing2 1s ease;
+    margin-top: 10px;
+    justify-self: center;
+    grid-area: button;
+    height: 45px;
+    width: 120px;
+    background-color: #BA68C8;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: #202020;
+}
+
+#btn:hover {
+    transition: 300ms;
+    background-color: #d37ee2;
+    cursor: pointer;
+}
+
+#btn:active {
+    transform: scale(.8);
+    transition: 200ms ease;
+}
+
+#btn2 {
+    background-color: transparent;
+    border: none;
+    justify-self: end;
+    height: 40px;
+    width: 40px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn2>img {
+    animation: right-left 1s ease;
+    height: 35px;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    animation: left-right 1s;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+header a:active {
+    transform: scale(0.8);
+    transition: 300ms;
+}
+
+.rotate {
+    animation: rotate .8s forwards;
+}
+
+.visibility {
+    visibility: hidden;
+}
+
+.animate {
+    animation: left-right2 .6s linear ;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotate2 {
+    0% {
+        transform: rotate(-90deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes left-right {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes right-left {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+}
+
+@keyframes growing {
+    0% {
+        transform: scale(0.2) rotate(-90deg);
+        opacity: 0;
+    }
+}
+
+@keyframes growing2 {
+    0% {
+        transform: scale(0.2);
+        opacity: 0;
+    }
+}
+
+.ao {
+    display: flex;
+    position: absolute;
+    background-color: black;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    filter: invert(1);
+    margin-left: 3px;
+}
+
+.ai {
+    align-self: center;
+    justify-self: flex-end;
+    grid-area: mode;
+    display: flex;
+    align-items: center;
+    background-color: rgb(182, 174, 174);
+    width: 80px;
+    height: 36px;
+    padding: 2px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none;
+    margin-right: 30px;
+}
+
+.ab {
+    animation: move-c .7s alternate forwards;
+}
+
+.dark-mode {
+    transition: .6s;
+    background-color: #212121;
+}
+
+.invert {
+    transition: .6s;
+    filter: invert(1);
+}
+
+@keyframes move-c {
+    0% {
+        transform: translateX(0px);
+    }
+
+    100% {
+        transform: translateX(43px);
+        filter: invert(0);
+    }
+}
+@keyframes cat-m{
+    0%{
+        transform: translateY(0px);
+        transition: 700ms;
+    }
+    100%{
+        transform: translateY(-20px);
+    }
+}
+@keyframes move-d {
+    0% {
+        transform: translateX(30px);
+    }
+
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.color {
+    color: white;
+    transition: .6s;
+}
+
+@keyframes left-right2 {
+    0% {
+        transform: translateX(-30px);
+        opacity: 0;
+    }
+}
+
+.color3 {
+    color: #dfdfdf;
+}
+
+.color2 {
+    transition: .6s;
+    background-color: #dfdfdf;
+}
+
+@media (min-width:767px) {
+    header a {
+        font-size: 30px;
+    }
+
+    #btn2 {
+        margin-right: 10px;
+    }
+
+    #btn2 img {
+        margin-right: 20px;
+        height: 50px;
+    }
+    form{
+        grid-template-rows: 70px;
+    }
+    form>img {
+        height: 400px;
+    }
+
+    .user {
+        align-self: start;
+    }
+
+    .user label {
+        font-size: 40px;
+    }
+
+    .user input {
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    .password {
+        align-self: start;
+    }
+
+    .password label {
+        font-size: 40px;
+    }
+
+    .password input {
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    #btn {
+
+        margin-bottom: 5px;
+    }
+    .ai{
+        align-self: center;
+        margin-right: 10px;
+    }
+}
+
+@media (min-width:1023px) {
+    section {
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 50px;
+        grid-template-areas:
+            "logo nav"
+            "form form"
+        ;
+    }
+
+    #btn2 {
+        display: none;
+    }
+
+    nav a {
+        display: flex;
+        align-items: center;
+        visibility: visible;
+    }
+
+    form{
+        margin: 0px 20px;
+        align-self: center;
+        grid-area: form;
+        background-color: #202020;
+        display: grid;
+        height: 80vh;
+        width: 70em;
+        border-radius: 10px;
+        justify-self: center;
+        grid-template-columns: 45% 45% 10%;
+        grid-template-rows: 80px 250px 120px auto;
+        grid-template-areas:
+            "img login mode"
+            "img user user"
+            "img password password"
+            "img button button"
+            /* "login mode"
+        "img img"
+        "user user"
+        "password password"
+        "button button"*/
+        ;
+        box-shadow: 7px 7px 15px #e030ff;
+    }
+
+    form img {
+        animation: growing 1s linear, cat-m2 1s 1.5 linear infinite alternate;
+        display: flex;
+        align-self: center;
+        height: 500px;
+    }
+
+    form>h3 {
+        display: flex;
+        justify-content: center;
+        margin-left: 150px;
+        font-size: 40px;
+    }
+
+    .user {
+        display: grid;
+        justify-self: flex-start;
+        align-self: flex-end;
+        margin-left: 150px;
+        margin-top: 300px;
+    }
+
+    .user label {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .user input {
+        font-size: 20px;
+        margin-top: 5px;
+        height: 40px;
+        width: 350px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        justify-self: center;
+    }
+
+    .password {
+        display: grid;
+        justify-self: flex-start;
+        align-self: flex-start;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+    .password label {
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .password input {
+        font-size: 20px;
+        margin-top: 5px;
+        height: 40px;
+        width: 350px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        justify-self: center;
+    }
+
+    #btn {
+        align-self: flex-start;
+        margin-left: 40px;
+    }
+    nav a:hover{
+        border-bottom: 3px solid #212121;
+        transition: .2s;
+    }
+    nav a:active{
+        transform: scale(.8);
+        transition: .3s;
+    }
+    @keyframes cat-m2{
+        0%{
+            transform: translateY(0px);
+            transition: 300ms;
+        }
+        100%{
+            transform: translateY(-60px);
+        }
+    }
+}
+
+
+@media (min-width:1440px) {
+    form{
+        width: 95%;
+        grid-template-rows: 80px 250px 200px auto;
+    }
+    form>h3 {
+        font-size: 50px;
+        margin-left: 240px;
+    }
+
+    .password {
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        margin-left: 80px;
+        margin-bottom: 50px;
+    }
+
+    .password label {
+        font-size: 50px;
+    }
+
+    .password input {
+        margin-top: 30px;
+        height: 50px;
+        width: 400px;
+    }
+
+    .user {
+        display: grid;
+        justify-self: center;
+        align-self: flex-end;
+        margin-left: 80px;
+    }
+
+    .user label {
+        font-size: 50px;
+    }
+
+    .user input {
+        margin-top: 30px;
+        height: 50px;
+        width: 400px;
+    }
+
+    #btn {
+        margin-left: 80px;
+    }
+}
