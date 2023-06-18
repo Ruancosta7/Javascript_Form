@@ -3,6 +3,8 @@ btn.addEventListener('click', visibility)
 
 function visibility(){
     document.querySelector('nav').classList.toggle('visibility')
+    document.querySelector('form').classList.toggle('visibility2')
+
 }
 
 let btn2 = document.querySelector('#btn2')
@@ -42,7 +44,7 @@ op.addEventListener('click', ()=>{
     document.querySelector('form h3').classList.toggle('color3')
     document.querySelector('form .input1').classList.toggle('color3')
     document.querySelector('form .input2').classList.toggle('color3')
-    
+    document.querySelector('nav').classList.toggle('background2')
 })
 
 let mode = document.querySelector('.ai')
